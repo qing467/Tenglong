@@ -15,10 +15,11 @@
 ## 目录
 
 ```
-nanotab/   扩展源码（React 19 + Vite，Manifest V3）
-site/      官网单页（纯静态，无构建步骤）
-docs/      需求、技术选型与 UI 规范
-tools/     图标生成脚本
+index.html   官网首页
+assets/      官网样式、脚本与图片
+nanotab/     扩展源码（React 19 + Vite，Manifest V3）
+docs/        需求、技术选型与 UI 规范
+tools/       图标生成脚本
 ```
 
 ## 安装
@@ -35,9 +36,9 @@ npm run build          # 产物在 nanotab/dist
 
 ## 官网
 
-`site/` 是零依赖的静态页面，`.github/workflows/pages.yml` 会在 `site/` 变更并推送到 `main` 时自动发布到 GitHub Pages；也可以在仓库 **Settings → Pages → Source** 里选 **GitHub Actions** 后手动触发。
+官网就是仓库根目录的静态页面（`index.html` + `assets/`），零依赖、无构建步骤，由 GitHub Pages 的 `main` 分支根目录直接发布，推送后一分钟内自动生效。
 
-本地预览：`cd site && python -m http.server 5173`。
+本地预览：在仓库根目录执行 `python -m http.server 5173`，访问 <http://127.0.0.1:5173/>。
 
 ## 素材来源
 
