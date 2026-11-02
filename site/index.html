@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>腾龙起始页 · 纯本地的极简新标签页</title>
+<meta name="description" content="腾龙起始页是一个纯本地、断网可用的极简浏览器起始页扩展：大号时钟、磨砂搜索、捷径坞与收纳夹，无账号、无上传。" />
+<meta name="theme-color" content="#07080a" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon32.png" />
+<meta property="og:title" content="腾龙起始页 · 纯本地的极简新标签页" />
+<meta property="og:description" content="大号时钟、一片磨砂搜索框、一屏自己整理的站点。所有数据都留在这台电脑上。" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body id="top">
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">
+      <img src="assets/icon128.png" alt="" width="26" height="26" />
+      <span class="brand-name">腾龙起始页</span>
+      <span class="ver">v1.0.2</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#demo">界面预览</a>
+      <a href="#features">功能</a>
+      <a href="#install">安装</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" href="#install">获取扩展</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span>纯本地 · 断网可用 · Manifest V3</p>
+        <h1>打开新标签页，<br /><em>只剩下一片安静。</em></h1>
+        <p class="lede">大号时钟、一片磨砂搜索框、一屏自己整理的站点。没有推送、没有广告、没有账号——所有数据都留在这台电脑上。</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#install">安装到 Chrome
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-glass" href="#demo">看看界面</a>
+        </div>
+        <ul class="hero-meta">
+          <li><b>0</b><span>服务器与账号</span></li>
+          <li><b>23</b><span>内置常用站点</span></li>
+          <li><b>30 KB</b><span>实际占用存储</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-mock">
+        <div class="browser">
+          <div class="browser-top">
+            <div class="dots"><i></i><i></i><i></i></div>
+            <div class="tab">
+              <img src="assets/icon16.png" alt="" width="14" height="14" />
+              <span>腾龙起始页</span>
+              <svg class="tab-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            </div>
+          </div>
+          <div class="browser-addr">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg>
+            <span>chrome-extension://…/newtab.html</span>
+          </div>
+          <div class="browser-stage">
+            <div class="clock"><span data-clock>08:24</span></div>
+            <div class="capsule"><span>搜 索</span></div>
+            <p class="stage-hint">右键空白处，进入捷径坞</p>
+          </div>
+        </div>
+        <p class="mock-cap">静默态：一片壁纸 + 时钟 + 搜索胶囊</p>
+      </div>
+    </div>
+    <a class="scroll-hint" href="#demo" aria-label="继续浏览">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <!-- 界面预览 -->
+  <section class="section" id="demo">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="dot"></span>界面预览</p>
+        <h2>四个状态，一套克制的美学</h2>
+        <p>下面不是截图，而是按扩展真实样式重绘的界面。切换标签看不同的状态。</p>
+      </div>
+
+      <div class="demo-tabs reveal" role="tablist" aria-label="界面状态">
+        <button class="demo-tab is-on" data-tab="idle" role="tab" aria-selected="true">静默态</button>
+        <button class="demo-tab" data-tab="search" role="tab" aria-selected="false">搜索态</button>
+        <button class="demo-tab" data-tab="dock" role="tab" aria-selected="false">捷径坞</button>
+        <button class="demo-tab" data-tab="settings" role="tab" aria-selected="false">设置</button>
+      </div>
+
+      <div class="demo-frame reveal">
+
+        <div class="stage is-on" data-stage="idle" style="background-image:url('assets/mountain.jpg')">
+          <div class="stage-inner">
+            <div class="clock big"><span data-clock>08:24</span></div>
+            <div class="capsule wide"><span>搜 索</span></div>
+          </div>
+          <span class="stage-tag">点击胶囊或按 Enter 进入搜索</span>
+        </div>
+
+        <div class="stage" data-stage="search" style="background-image:url('assets/lake.jpg')">
+          <div class="stage-inner">
+            <div class="clock big dim"><span data-clock>08:24</span></div>
+            <div class="search-active">
+              <span class="engine-badge">B</span>
+              <span class="search-text">磨砂玻璃 与 高斯模糊 的区别</span>
+              <span class="caret"></span>
+              <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg></span>
+            </div>
+            <div class="hist-drop">
+              <div class="hist-item"><i></i><span>backdrop-filter 性能优化</span></div>
+              <div class="hist-item"><i></i><span>manifest v3 无后台脚本</span></div>
+              <div class="hist-item"><i></i><span>chrome.storage.local 配额</span></div>
+              <div class="hist-foot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M9 7V5h6v2M6 7l1 12h10l1-12"/></svg><span>清除历史记录</span></div>
+            </div>
+          </div>
+          <span class="stage-tag">6 个内置引擎，也支持自己的 {q} 模板</span>
+        </div>
+
+        <div class="stage dock-stage" data-stage="dock" style="background-image:url('assets/mountain.jpg')">
+          <div class="stage-top">
+            <span class="icon-btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></span>
+            <span class="icon-btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6 6l1.4 1.4M16.6 16.6L18 18M18 6l-1.4 1.4M7.4 16.6L6 18"/></svg></span>
+          </div>
+          <div class="dock-clock"><div class="clock"><span data-clock>08:24</span></div></div>
+          <div class="dock-grid">
+            <a class="dock-item"><span class="tile" style="--bg:#FB7299"><svg viewBox="0 0 40 40"><g fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round"><rect x="7" y="12" width="26" height="19" rx="6"/><path d="M13.5 7.5 17.5 12M26.5 7.5 22.5 12"/></g><circle cx="15.5" cy="21.5" r="2" fill="#fff"/><circle cx="24.5" cy="21.5" r="2" fill="#fff"/></svg></span><span class="dock-name">bilibili</span></a>
+            <a class="dock-item"><span class="tile" style="--bg:#4D6BFE"><svg viewBox="0 0 40 40"><circle cx="18.5" cy="22" r="8.5" fill="#fff"/><path d="M26.5 15.5 34 10l-2 9.5z" fill="#fff"/><circle cx="15.5" cy="20" r="1.5" fill="#4D6BFE"/></svg></span><span class="dock-name">DeepSeek</span></a>
+            <a class="dock-item"><span class="tile" style="--bg:#fff"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="11.5" fill="#8C9DFF"/><circle cx="16.2" cy="18" r="1.7" fill="#fff"/><circle cx="23.8" cy="18" r="1.7" fill="#fff"/><path d="M16 24.5c2.6 2.1 5.4 2.1 8 0" stroke="#fff" stroke-width="2.1" fill="none" stroke-linecap="round"/></svg></span><span class="dock-name">豆包</span></a>
+            <a class="dock-item"><span class="tile" style="--bg:#0E0E10"><svg viewBox="0 0 40 40"><g fill="none" stroke="#fff" stroke-width="2.3" stroke-linejoin="round"><path d="M20 9.5 26.5 13.5v7.5L20 25l-6.5-4v-7.5z"/><path d="M20 17.5 26.5 21.5v7.5L20 33l-6.5-4v-7.5z" opacity=".55"/></g></svg></span><span class="dock-name">ChatGPT</span></a>
+            <a class="dock-item"><span class="tile" style="--bg:#3370FF"><svg viewBox="0 0 40 40"><path d="M10 27 30 13l-7.5 15-4.6-5.2z" fill="#fff"/><path d="M30 13 17.9 22.8" stroke="#3370FF" stroke-width="1.8"/></svg></span><span class="dock-name">飞书文档</span></a>
+            <a class="dock-item"><span class="tile" style="--bg:#2E4A63"><span class="glyph">52</span></span><span class="dock-name">52pojie</span></a>
+            <a class="dock-item"><span class="tile" style="--bg:#1FB4E8"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="11" fill="none" stroke="#fff" stroke-width="3.2"/><path d="M17 14.5 26 20l-9 5.5z" fill="#fff"/></svg></span><span class="dock-name">优酷</span></a>
+            <a class="dock-item"><span class="tile" style="--bg:#3385FF"><span class="glyph">贴</span></span><span class="dock-name">百度贴吧</span></a>
+            <a class="dock-item"><span class="tile" style="--bg:#FF6A00"><svg viewBox="0 0 40 40"><path d="M14 11.5 28.5 20 14 28.5z" fill="#fff"/></svg></span><span class="dock-name">腾讯视频</span></a>
+            <a class="dock-item"><span class="tile" style="--bg:#00BE06"><svg viewBox="0 0 40 40"><g fill="#fff"><rect x="10" y="12" width="3.6" height="16" rx="1.4"/><rect x="16.4" y="9" width="3.6" height="22" rx="1.4"/><rect x="22.8" y="12" width="3.6" height="16" rx="1.4"/><circle cx="30" cy="26" r="2"/></g></svg></span><span class="dock-name">爱奇艺</span></a>
+            <a class="dock-item"><span class="tile" style="--bg:#24292F"><svg viewBox="0 0 24 24"><path fill="#fff" d="M12 3a9 9 0 0 0-2.86 17.53c.45.08.61-.2.61-.43v-1.6c-2.4.52-2.98-1.05-2.98-1.05-.4-.95-.98-1.2-.98-1.2-.8-.55.06-.54.06-.54.9.06 1.36.92 1.36.92.79 1.35 2.08 1 2.58.76.08-.6.31-.98.56-1.2-2-.23-4.1-1-4.1-4.4 0-1 .34-1.8.9-2.4-.09-.23-.4-1.14.09-2.38 0 0 .74-.24 2.46.91a8.5 8.5 0 0 1 4.48 0c1.72-1.15 2.46-.91 2.46-.91.49 1.24.18 2.15.09 2.38.56.6.9 1.4.9 2.4 0 3.4-2.1 4.17-4.1 4.4.32.28.6.82.6 1.64v2.44c0 .23.16.51.61.43A9 9 0 0 0 12 3z"/></svg></span><span class="dock-name">github</span></a>
+            <a class="dock-item"><span class="tile" style="--bg:#E6162D"><svg viewBox="0 0 40 40"><path d="M9 13l3.6 13.5L20 17l7.4 9.5L31 13" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="dock-name">微博</span></a>
+            <a class="dock-item"><span class="tile folder"><span class="folder-grid"><i style="background:#FB7299"></i><i style="background:#00BE06"></i><i style="background:#FF6A00"></i><i style="background:#3385FF"></i></span></span><span class="dock-name">影音（4）</span></a>
+            <a class="dock-item"><span class="tile plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span><span class="dock-name">添加</span></a>
+          </div>
+          <span class="stage-tag">拖拽排序 · 右键编辑 · 收纳成夹</span>
+        </div>
+
+        <div class="stage settings-stage" data-stage="settings" style="background-image:url('assets/lake.jpg')">
+          <div class="settings-mock">
+            <div class="sm-head">
+              <span class="sm-title">设置</span>
+              <span class="sm-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+            </div>
+            <div class="sm-body">
+              <p class="sm-label">壁纸</p>
+              <div class="sm-group">
+                <div class="sm-walls">
+                  <i class="w" style="background:#000"></i>
+                  <i class="w" style="background:#fff"></i>
+                  <i class="w is-on" style="background-image:url('assets/mountain.jpg')"></i>
+                  <i class="w" style="background-image:url('assets/lake.jpg')"></i>
+                </div>
+              </div>
+              <p class="sm-label">时钟</p>
+              <div class="sm-group">
+                <div class="sm-row"><span>时间格式</span><div class="seg"><b class="on">24 小时</b><b>12 小时</b></div></div>
+                <div class="sm-row"><span>显示秒钟</span><span class="sw on"></span></div>
+              </div>
+              <p class="sm-label">数据</p>
+              <div class="sm-group">
+                <div class="sm-row link">导出备份<span class="chev"></span></div>
+                <div class="sm-row link">导入备份<span class="chev"></span></div>
+                <div class="sm-row link danger">恢复默认设置<span class="chev"></span></div>
+              </div>
+              <p class="sm-note">所有内容只保存在本机 chrome.storage.local</p>
+            </div>
+          </div>
+          <span class="stage-tag">iOS 风格分组卡片，右侧滑出</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 功能 -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="dot"></span>功能</p>
+        <h2>够用，且不多做一件事</h2>
+        <p>没有待办、没有资讯流、没有登录入口。只把「打开新标签页」这一刻做好。</p>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <span class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3.6 2.1"/></svg></span>
+          <h3>大号时钟</h3>
+          <p>字号随屏幕自适应，12 / 24 小时可切，秒钟能随手关掉——少一次每秒重绘。</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></span>
+          <h3>磨砂搜索</h3>
+          <p>六个内置引擎，也能加自己的 <code>{q}</code> 模板。输入网址直接打开，其余才交给搜索。</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></svg></span>
+          <h3>捷径坞</h3>
+          <p>右键空白处即达。23 个内置站点，增删改、拖拽排序，松手即存盘。</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h3l2 2.5h6A2.5 2.5 0 0 1 20 11v6.5a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 17.5z"/></svg></span>
+          <h3>收纳夹</h3>
+          <p>同类站点收成一叠，卡片上直接看到 2×2 缩略。删掉夹子，里面的站点会回到坞上。</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="14" rx="2.5"/><circle cx="9" cy="10.5" r="1.6"/><path d="M5 17.5l5-4.5 3.5 3 2.5-2 3 3.5"/></svg></span>
+          <h3>壁纸</h3>
+          <p>纯黑、纯白与两张内置照片，也能上传本地图片（自动压到 2560px）或粘贴图片地址。</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10"/><path d="M8 10.5l4 3.5 4-3.5"/><path d="M4.5 16.5v2A1.5 1.5 0 0 0 6 20h12a1.5 1.5 0 0 0 1.5-1.5v-2"/></svg></span>
+          <h3>备份与迁移</h3>
+          <p>设置、捷径、历史一键导出 JSON。换电脑导入即还原，恢复默认要连点两次防误触。</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg></span>
+          <h3>纯本地</h3>
+          <p>无服务器、无账号、无数据上传。断网照常打开，扩展只申请了 <code>storage</code> 权限。</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h9M17 7h3M4 12h4M12 12h8M4 17h9M17 17h3"/><circle cx="15" cy="7" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="15" cy="17" r="2"/></svg></span>
+          <h3>iOS 风格设置</h3>
+          <p>分组卡片、绿色开关、蓝色导航行。所有开关都在一个抽屉里，改完立刻生效。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 安装 -->
+  <section class="section" id="install">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="dot"></span>安装</p>
+        <h2>三步，两分钟</h2>
+        <p>扩展尚未上架应用商店，用开发者模式加载即可，功能完全一致。</p>
+      </div>
+
+      <div class="install-grid">
+        <ol class="steps reveal">
+          <li>
+            <span class="num">1</span>
+            <div>
+              <h3>解压到固定目录</h3>
+              <p>把 <code>nanotab-v1.0.2.zip</code> 解压到一个不会被清理的位置。Chrome 每次启动都要读这个目录，别删。</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">2</span>
+            <div>
+              <h3>打开扩展管理页</h3>
+              <p>地址栏输入下面的地址回车，然后在右上角打开「开发者模式」。</p>
+              <button class="chip-copy" data-copy="chrome://extensions">
+                <code>chrome://extensions</code><span class="copy-tip">复制</span>
+              </button>
+            </div>
+          </li>
+          <li>
+            <span class="num">3</span>
+            <div>
+              <h3>加载已解压的扩展</h3>
+              <p>点左上角「加载已解压的扩展程序」，选中第 1 步解压出的文件夹，再新建一个标签页。</p>
+            </div>
+          </li>
+        </ol>
+
+        <aside class="tip-card reveal">
+          <h3>为什么不是 CRX？</h3>
+          <p>Chrome 自 2023 年起只允许安装由应用商店签名的 CRX，本地自签名的包拖进扩展页会被直接拦截（<code>CRX_REQUIRED_PROOF_MISSING</code>），开启开发者模式也无法绕过。</p>
+          <p>所以「解压 + 加载已解压的扩展程序」是本地安装唯一稳定可靠的方式。</p>
+          <div class="badges">
+            <span class="badge ok">Chrome 100+</span>
+            <span class="badge ok">Edge 100+</span>
+            <span class="badge">Manifest V3</span>
+          </div>
+        </aside>
+      </div>
+
+      <div class="kbd-row reveal">
+        <p class="kbd-title">常用快捷键</p>
+        <ul class="kbd-list">
+          <li><kbd>Enter</kbd><span>进入搜索态</span></li>
+          <li><kbd>Alt</kbd><kbd>1~9</kbd><span>切换第 N 个引擎</span></li>
+          <li><kbd>Esc</kbd><span>逐级退出</span></li>
+          <li><kbd>右键</kbd><span>空白处进捷径坞</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数据 -->
+  <section class="section" id="data">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="dot"></span>数据</p>
+        <h2>它存在哪，会不会丢</h2>
+        <p>全部写在 <code>chrome.storage.local</code>，也就是本机 Chrome 的用户数据目录，配额 10 MB，实际只占几十 KB。</p>
+      </div>
+      <div class="data-list reveal">
+        <div class="data-row"><span>关闭浏览器 / 重启电脑</span><b class="ok">保留</b></div>
+        <div class="data-row"><span>升级扩展版本</span><b class="ok">保留（含自动迁移）</b></div>
+        <div class="data-row"><span>卸载扩展</span><b class="no">清除</b></div>
+        <div class="data-row"><span>清除浏览数据时勾选「扩展程序数据」</span><b class="no">清除</b></div>
+        <div class="data-row"><span>无痕窗口</span><b class="warn">关闭后清除</b></div>
+        <div class="data-row"><span>换一台电脑</span><b class="warn">不同步，需导入备份</b></div>
+      </div>
+      <p class="data-foot">担心误清的话，在设置里点「导出备份」存一份 JSON，随时能导入还原。</p>
+    </div>
+  </section>
+
+  <!-- 常见问题 -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="dot"></span>常见问题</p>
+        <h2>你可能想问</h2>
+      </div>
+      <div class="faq reveal">
+        <details open>
+          <summary>需要联网才能用吗？</summary>
+          <p>不需要。页面本身、壁纸、站点图标与搜索都走本地逻辑，只有你真的发起搜索或打开站点时才联网。断网时新标签页照常打开。</p>
+        </details>
+        <details>
+          <summary>会收集我的数据吗？</summary>
+          <p>不会。没有服务器，也没有账号体系，扩展只申请了 <code>storage</code>、<code>unlimitedStorage</code> 和 <code>downloads</code>（下载备份用）三个权限，没有任何数据出站。</p>
+        </details>
+        <details>
+          <summary>为什么拖 CRX 进扩展页会失败？</summary>
+          <p>Chrome 只信任由应用商店签名的 CRX，本地自签名的包会被拦截并提示 <code>CRX_REQUIRED_PROOF_MISSING</code>。请改用「加载已解压的扩展程序」。</p>
+        </details>
+        <details>
+          <summary>为什么每次启动 Chrome 都提示要保留文件？</summary>
+          <p>Chrome 每次启动都会读取扩展目录。请把解压后的文件夹放在固定位置，不要删、不要挪到临时目录。</p>
+        </details>
+        <details>
+          <summary>能同步到别的电脑吗？</summary>
+          <p>不能自动同步（<code>storage.local</code> 是本机存储）。在设置里导出 JSON，到另一台电脑导入即可完整还原设置、捷径与历史。</p>
+        </details>
+        <details>
+          <summary>支持 Firefox / Safari 吗？</summary>
+          <p>目前只针对 Chromium 系（Chrome、Edge，版本 100+），基于 Manifest V3 实现，没有适配其他内核。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 结尾 CTA -->
+  <section class="cta">
+    <div class="container cta-inner reveal">
+      <h2>把新标签页，还给自己</h2>
+      <p>解压、加载、新建标签页。两分钟之后，它就在那里了。</p>
+      <a class="btn btn-primary" href="#install">开始安装
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="assets/icon128.png" alt="" width="28" height="28" />
+      <div>
+        <strong>腾龙起始页</strong>
+        <p>纯本地、断网可用的极简起始页 · v1.0.2</p>
+      </div>
+    </div>
+    <nav class="footer-links">
+      <a href="#demo">界面预览</a>
+      <a href="#features">功能</a>
+      <a href="#install">安装</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <p class="footer-note">没有服务器，也没有账号。你的数据只在本机。</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
